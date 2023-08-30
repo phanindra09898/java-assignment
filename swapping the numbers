@@ -1,0 +1,19 @@
+public class SwapNumbers {
+
+    public static void main(String[] args) {
+
+        float a = 20f, b = 40f;
+
+        System.out.println("--Before swap--");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+
+        float temporary = a;
+        a = b;
+        b = temporary;
+
+        System.out.println("--After swap--");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}

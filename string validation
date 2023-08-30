@@ -1,0 +1,29 @@
+class StringValidation 
+{
+public static void main(String[] args) 
+{
+ try 
+{
+validateString("SUMANTH");
+System.out.println("String is valid.");
+} 
+catch (EmptyStringException e) 
+{
+ System.out.println("Exception: " + e.getMessage());
+}
+}
+public static void validateString(String input) throws EmptyStringException 
+{
+if (input.trim().isEmpty()) 
+{
+throw new EmptyStringException("String is empty or contains only whitespace.");
+}
+}
+}
+class EmptyStringException extends Exception 
+{
+ public EmptyStringException(String message) 
+{
+super(message);
+}
+}
